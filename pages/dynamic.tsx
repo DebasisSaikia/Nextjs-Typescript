@@ -4,6 +4,7 @@ import { GetStaticProps } from "next"
 export const getStaticProps: GetStaticProps = async (context) => {
     return {
         props: {
+            revalidate: 10,  //works only on production .re generate the page but not frequent
             myNumber: 33000 * 12
         }
     }
